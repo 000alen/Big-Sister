@@ -1,0 +1,5 @@
+{
+    "CORE": "Resultados_Mesa_Cores_Ter.csv",
+    "DIPUTADO": "Resultados_Mesa_DIPUTADOS_Tricel.csv",
+    "PRESIDENTE": ["Resultados_Mesa_PRESIDENCIAL_Tricel_1v.csv", "Resultados_Mesa_PRESIDENCIAL_Tricel_2v.csv"]
+}

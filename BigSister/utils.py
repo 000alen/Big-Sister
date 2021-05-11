@@ -1,14 +1,14 @@
 import re
 
-from BigSister import comunas_chile
+from BigSister import comunas_rm
 
 
 def get_comuna_name(identifier: str) -> str:
-    return comunas_chile[identifier]
+    return comunas_rm[identifier]
 
 
 def get_comuna_identifier(comuna_name: str) -> str:
-    for identifier, name in comunas_chile.items():
+    for identifier, name in comunas_rm.items():
         if name == comuna_name:
             return identifier
 
