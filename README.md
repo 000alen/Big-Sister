@@ -14,3 +14,6 @@ Archivo `.json` que contiene los identificadores de las comunas de toda la Regi�
 
 ## `padron_rm.json`
 Archivo `.json` que contiene la información de cada uno de los archivos `.csv` disponibles en el padrón de la Región Metropolitana. El formato de las entradas es el siguiente `identifier: [begin, end, page]`. Para obtener el nombre del archivo `.csv` correspondiente se usa el siguiente formato `f"{identifier}__{begin}__{end}_p{page}.csv"`.
+
+## `resultados_rm.json`
+Archivo `.json` que contiene los nombres de cada uno de los archivos `.csv` disponibles sobre los resultados de elecciones de la Region Metropolitana (2017).
