@@ -1,6 +1,9 @@
 .vscode/
+raw_padron_rm/
 padron_rm/
+raw_resultados_rm/
 resultados_rm/
+databases/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
