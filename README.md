@@ -1,5 +1,5 @@
 # Big-Sister
-[Descargar PadronCSV](https://drive.google.com/drive/folders/1Xm0ZDjFSqIOI98CFnCOqA5fOttcvZqf0?usp=sharing)
+[Descargar padron_rm](https://drive.google.com/drive/folders/1Xm0ZDjFSqIOI98CFnCOqA5fOttcvZqf0?usp=sharing)
 
 ## Uso
 Para ejecutar `BigSister` se debe ejecutar el siguiente comando `python -m BigSister`, o bien ejecutar `run.bat` o `run.sh` según corresponda.
