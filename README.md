@@ -43,6 +43,8 @@ Archivo `.json` que contiene los identificadores de las comunas de toda la Regi√
 
 ### `raw_padron_rm/`
 
+uwu2
+
 ### `raw_resultados_rm/`
 
 ### `databases/DCM/`
