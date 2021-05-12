@@ -3,6 +3,9 @@ Descargar [raw_padron_rm/](https://drive.google.com/drive/folders/1Xm0ZDjFSqIOI9
 
 Descargar [raw_resultados_rm/](https://drive.google.com/drive/folders/1neTYxtrzMGfdBsvfTE4_Y8gezdAE4F5-?usp=sharing)
 
+## Dependencias
+
+
 ## Uso
 Para ejecutar `BigSister` se debe ejecutar el siguiente comando `python -m BigSister`, o bien ejecutar `run.bat` o `run.sh` según corresponda.
 
