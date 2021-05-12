@@ -1,3 +1,5 @@
+import csv
+
 header = [
     "Region",
     "Provincia",
@@ -17,3 +19,9 @@ header = [
     "Candidato",
     "Votos TER"   
 ]
+
+file = open("../database/Resultados_Mesa_DIPUTADOS.xlsx")
+
+
+
+
