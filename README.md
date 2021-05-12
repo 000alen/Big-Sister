@@ -6,15 +6,20 @@ Descargar [raw_resultados_rm/](https://drive.google.com/drive/folders/1neTYxtrzM
 ## Uso
 Para ejecutar `BigSister` se debe ejecutar el siguiente comando `python -m BigSister`, o bien ejecutar `run.bat` o `run.sh` según corresponda.
 
-## To-do list
-- [ ] `clean_raw_resultados_rm_core.py`
-- [ ] `clean_raw_resultados_rm_diputados.py`
-- [ ] `clean_raw_resultados_rm_presidencial_1v.py`
-- [ ] `clean_raw_resultados_rm_presidencial_2v.py`
-- [ ] Procesar bases de datos para extraer informacion relevante
-- [ ] Explorar frameworks para visualizacion de datos (Cartopy?)
-- [ ] Parallelization
+## Objetivos
+- Comparación con elecciones pasadas
+- Muestreo de la participación dentro de la comuna
 
+## To-do list
+### Alen
+- [ ] Geocoding
+
+### Juan Pablo
+- [ ] Limpieza, formateo y extracción de datos relevantes de raw_resultados_rm
+
+### Mixto
+- [ ] Cartopy
+    - [ ] Mapa de densidad probabilística
 
 ## Scripts
 ### `clean_raw_padron_rm.py`
