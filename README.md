@@ -13,13 +13,13 @@ Para ejecutar `BigSister` se debe ejecutar el siguiente comando `python -m BigSi
 ## To-do list
 ### Alen
 - [ ] Geocoding
+- [ ] Cartopy
 
 ### Juan Pablo
 - [ ] Limpieza, formateo y extracción de datos relevantes de raw_resultados_rm
 
 ### Mixto
-- [ ] Cartopy
-    - [ ] Mapa de densidad probabilística
+- [ ] Mapa de densidad probabilística
 
 ## Scripts
 ### `clean_raw_padron_rm.py`
