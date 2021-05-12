@@ -20,7 +20,14 @@ header = [
     "Votos TER"   
 ]
 
-file = open("../database/Resultados_Mesa_DIPUTADOS.xlsx")
+
+
+file = open("../../databases/Resultados_Mesa_DIPUTADOS.xlsx", "r")
+
+for i in file:
+    print(i)
+
+file.close()
 
 
 
