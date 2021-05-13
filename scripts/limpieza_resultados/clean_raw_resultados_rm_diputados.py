@@ -1,4 +1,8 @@
 import csv
+import os
+from pathlib import Path
+
+CANDIDATO = "GIORGIO JACKSON DRAGO"
 
 header = [
     "Region",
@@ -20,14 +24,21 @@ header = [
     "Votos TER"   
 ]
 
+root = Path("../../databases/")
+
+#print(root)
+
+csv_reader = csv.reader(open("/Users/jp/Documents/Programacion/Python/Big-Sister/databases/Resultados_Mesa_DIPUTADOS.csv"), delimiter = ';')
+
+for i in csv_reader:
+    for b in i:
+        if b == CANDIDATO:
+            print(i)
 
 
-file = open("../../databases/Resultados_Mesa_DIPUTADOS.xlsx", "r")
 
-for i in file:
-    print(i)
 
-file.close()
+
 
 
 
