@@ -4,6 +4,8 @@ padron_rm/
 raw_resultados/
 resultados_rm/
 venv/
+servel/
+padrones/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -134,10 +136,3 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-
-#databases
-.~$Resultados_Mesa_DIPUTADOS.xlsx
-Resultados_Mesa_DIPUTADOS.xlsx
-Resultados_Mesa_DIPUTADOS.csv
-Resultados_Mesa_DIPUTADOS.xlsx
-Resultados_Mesa_DIPUTADOS.csv
