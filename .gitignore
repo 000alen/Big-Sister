@@ -139,6 +139,7 @@ dmypy.json
 #Remove databases
 databases/IN/servel/resultados_diputados_1989_2017.csv
 databases/IN/servel/resultados_mesa_diputados.csv
+databases/OUT/servel/elecciones_diputados.csv
 
 
 
