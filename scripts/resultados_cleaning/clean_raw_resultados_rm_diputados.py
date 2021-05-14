@@ -1,7 +1,17 @@
 import csv
 import os
+from operator import itemgetter
 
-CANDIDATO = "GIORGIO JACKSON DRAGO"
+CANDIDATOS = [
+    "MARCELA SABAT FERNANDEZ",
+    "GIORGIO JACKSON DRAGO",
+    "SEBASTIAN TORREALBA ALVARADO",
+    "JORGE ALESSAMDRI VERGARA",
+    "LUCIANO CRUZ-COKE CARVALLO",
+    "NATALIA CASTILLO MUÑOZ",
+    "GONZALO WINTER ETCHEBERRY",
+    "MAYA FERNANDEZ ALLENDE"
+    ]
 
 header = [
     "Region",
@@ -23,32 +33,37 @@ header = [
     "Votos TER"   
 ]
 
-a = os.path.dirname("../../databases")
-print(a)
+header_clean =[
+    "Region", #0
+    "Distrito",#3
+    "Comuna",#4
+    "Local"#6
+    "Nro. Mesa",#7
+    "Tipo Mesa",#8
+    "Electores",#10
+    "Nro. En Voto",#11
+    "Candidato",#15
+    "Votos TER"#16
+]
 
-csv_reader = csv.reader(open("/Users/jp/Documents/Programacion/Python/Big-Sister/databases/IN/servel/Resultados_Mesa_DIPUTADOS.csv"), delimiter = ';')
+archivo = os.path.realpath("../../databases")
 
-with open('/Users/jp/Documents/Programacion/Python/Big-Sister/databases/OUT/servel/elecciones_diputados.csv', 'w', newline='') as outcsv:
-    writer = csv.writer(outcsv)
-    writer.writerow(header)
+print(archivo)
 
-    #"Region", #0
-    #"Distrito",#3
-    #"Comuna",#4
-    #"Local"#6
-    #"Nro. Mesa",#7
-    #"Tipo Mesa",#8
-    #"Mesas Fusionadas",#9
-    #"Electores",#10
-    #"Nro. En Voto",#11
-    #"Candidato",#15
-    #"Votos TER"#16
-    
-    for i in csv_reader:
-        for b in i:
-            if b == CANDIDATO:
-                outcsv.writelines(i + " ,")
+csv_reader = csv.reader(open(archivo + "/IN/servel/Resultados_Mesa_DIPUTADOS.csv"), delimiter = ';')
 
+def formatear():
+    with open(archivo + "/OUT/elecciones_diputados.csv", 'w', newline='') as outcsv:
+        writer = csv.writer(outcsv)
+        writer.writerow(header_clean)
+
+        for row in csv_reader:
+            for item in row:
+                if item in CANDIDATOS:
+                    row_clean = [row[0], row[3], row[4], row[6], row[7], row[8], row[9], row[10], row[11], row[15], row[16]]
+                    writer.writerow(row_clean)
+
+formatear()
 
 
 
