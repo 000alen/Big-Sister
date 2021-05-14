@@ -50,7 +50,7 @@ archivo = os.path.realpath("../../databases")
 
 print(archivo)
 
-csv_reader = csv.reader(open(archivo + "/IN/servel/Resultados_Mesa_DIPUTADOS.csv"), delimiter = ';')
+csv_reader = csv.reader(open(archivo + "/IN/servel/resultados_mesa_diputados.csv"), delimiter = ';')
 
 def formatear():
     with open(archivo + "/OUT/elecciones_diputados.csv", 'w', newline='') as outcsv:

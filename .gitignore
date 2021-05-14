@@ -4,8 +4,7 @@ padron_rm/
 raw_resultados/
 resultados_rm/
 venv/
-servel/
-padrones/
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -136,3 +135,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#Remove databases
+databases/IN/servel/resultados_diputados_1989_2017.csv
+databases/IN/servel/resultados_mesa_diputados.csv
+
+
+
