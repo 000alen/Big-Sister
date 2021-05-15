@@ -8,8 +8,8 @@ from pathlib import Path
 
 print("Generando RM_diputados")
 
-root = Path("../databases/IN/raw_resultados_rm/")
-out = Path("../databases/OUT/RM_diputados/")
+root = Path("../databases/IN/servel/")
+out = Path("../databases/OUT/servel/")
 
 print(f"root: {root}")
 print(f"out: {out}")
@@ -46,7 +46,7 @@ header = [
 ]
 
 tables = {
-    "RM_diputados": [
+    "clean_mesa_diputados": [
         "Distrito",
         "Comuna",
         "Local",
@@ -58,7 +58,7 @@ tables = {
     ]
 }
 
-mesa_diputados = reader(open(root / "Resultados_Mesa_DIPUTADOS_Tricel.csv"))
+mesa_diputados = reader(open(root / "mesa_diputados.csv"))
 
 for table_name, table_header in tables.items():
     print(f"Tabla actual: {table_name}")
