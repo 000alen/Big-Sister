@@ -12,6 +12,17 @@ Para desarrollar, es necesario descargar las bases de datos que se indican [aqu√
 ## Uso
 Para ejecutar `BigSister` se debe ejecutar el siguiente comando `python -m BigSister`, o bien ejecutar `run.bat` o `run.sh` seg√∫n corresponda.
 
+## Etructuras de bases de datos
+
+* /databases
+    * /IN
+        * etareo_comunas.csv
+        * mesa_diputados.csv
+    * /OUT
+        * clean_etareo_comunas.csv
+        * clean_mesa_diputados.csv
+
+
 ## Autores
 - Juan Pablo Gelmi ([jpgelmi](https://github.com/jpgelmi))
 
