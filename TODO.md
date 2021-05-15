@@ -5,7 +5,10 @@
 - [ ] Cartopy
 
 ## Juan Pablo
-- [ ] Limpieza, formateo y extracción de datos relevantes de raw_resultados_rm
+- [x] Limpieza, formateo y extracción de datos relevantes de raw_resultados_rm
+- [ ] Integración folium para mapas de calor
+- [ ] Generación de reportes servel
 
 ## Mixto
 - [ ] Mapa de densidad probabilística
+- [ ] Presentación del mapa en formato web
