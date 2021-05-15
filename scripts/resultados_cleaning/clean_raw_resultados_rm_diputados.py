@@ -46,16 +46,13 @@ header_clean =[
     "Votos TER"#16
 ]
 
-root = os.path.realpath("../../../")
-print(root)
+root = os.path.abspath("../")
+print("ROOT: ",root)
 
-resultados_mesa_diputados = root + "/Users/jp/Documents/Programacion/databases/IN/servel/resultados_mesa_diputados.csv"
-elecciones_diputados = root + "/Users/jp/Documents/Programacion/Python/databases/OUT/servel/elecciones_diputados.csv" 
-
-csv_reader = csv.reader(open(resultados_mesa_diputados), delimiter = ';')
+csv_reader = csv.reader(open( root + "/Big-Sister/databases/IN/servel/resultados_mesa_diputados.csv"), delimiter = ';')
 
 def formatear():
-    with open(elecciones_diputados, 'w', newline='') as outcsv:
+    with open(root + "/Big-Sister/databases/OUT/servel/elecciones_diputados.csv", 'w', newline='') as outcsv:
         writer = csv.writer(outcsv)
         writer.writerow(header_clean)
 
