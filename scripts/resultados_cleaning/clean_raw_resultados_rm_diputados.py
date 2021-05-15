@@ -32,7 +32,7 @@ header = [
     "Pacto",
     "Partido",
     "Candidato",
-    "Votos TER"
+    "Votos TRICEL"
 ]
 
 tables = {
@@ -44,7 +44,7 @@ tables = {
         "Tipo Mesa",
         "Electores",
         "Candidato",
-        "Votos TER"
+        "Votos TRICEL"
     ]
 }
 
