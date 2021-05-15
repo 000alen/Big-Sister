@@ -1,7 +1,10 @@
-import csv
-import os
+from csv import reader, writer
+from pathlib import Path
 
-CANDIDATOS = [
+root = Path("../../databases/IN/servel/")
+out = Path("../../databases/OUT/servel/")
+
+candidatos = [
     "MARCELA SABAT FERNANDEZ",
     "GIORGIO JACKSON DRAGO",
     "SEBASTIAN TORREALBA ALVARADO",
@@ -19,7 +22,7 @@ header = [
     "Distrito",
     "Comuna",
     "Circ. Electoral",
-    "Local"
+    "Local",
     "Nro. Mesa",
     "Tipo Mesa",
     "Mesas Fusionadas",
@@ -32,37 +35,25 @@ header = [
     "Votos TER"
 ]
 
-header_clean = [
-    "Region",  # 0
-    "Distrito",  # 3
-    "Comuna",  # 4
-    "Local"  # 6
-    "Nro. Mesa",  # 7
-    "Tipo Mesa",  # 8
-    "Electores",  # 10
-    "Nro. En Voto",  # 11
-    "Candidato",  # 15
-    "Votos TER"  # 16
-]
+tables = {
+    "clean_mesa_diputados": [
+        "Distrito",
+        "Comuna",
+        "Local",
+        "Nro. Mesa",
+        "Tipo Mesa",
+        "Electores",
+        "Candidato",
+        "Votos TER"
+    ]
+}
 
-root = os.path.abspath("../")
-print("ROOT: ", root)
+mesa_diputados = reader(open(root / "mesa_diputados.csv"))
 
-csv_reader = csv.reader(
-    open(root + "/Big-Sister/databases/IN/servel/mesa_diputados.csv"), delimiter=';')
+for table_name, table_header in tables.items():
+    table = writer(open(out / (table_name + ".csv"), "w", newline=""))
+    # table.writerow(table_header)
 
-
-def formatear():
-    with open(root + "/Big-Sister/databases/OUT/servel/clean_mesa_diputados.csv", 'w', newline='') as outcsv:
-        writer = csv.writer(outcsv)
-        writer.writerow(header_clean)
-
-        for row in csv_reader:
-            for item in row:
-                if item in CANDIDATOS:
-                    row_clean = [row[0], row[3], row[4], row[6], row[7],
-                                 row[8], row[9], row[10], row[11], row[15], row[16]]
-                    writer.writerow(row_clean)
-
-
-formatear()
+    for row in mesa_diputados:
+        row_information = {header[i]: row[i] for i in range(len(row))}
+        table.writerow(row_information[key] for key in table_header)

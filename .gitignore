@@ -1,6 +1,7 @@
 .vscode/
 raw_padron_rm/
 raw_resultados_rm/
+DCM/
 venv/
 .DS_Store
 
