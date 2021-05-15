@@ -5,7 +5,7 @@
 - [ ] Cartopy
 
 ## Juan Pablo
-- [x] Limpieza, formateo y extracción de datos relevantes de raw_resultados_rm
+- [x] Limpieza, formateo y extracción de datos relevantes de mesa_diputados.csv
 - [ ] Integración folium para mapas de calor
 - [ ] Generación de reportes servel
 
