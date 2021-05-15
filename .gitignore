@@ -4,6 +4,7 @@ padron_rm/
 raw_resultados/
 resultados_rm/
 venv/
+.DS_store
 
 
 # Byte-compiled / optimized / DLL files
