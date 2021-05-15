@@ -1,6 +1,5 @@
 import csv
 import os
-from operator import itemgetter
 
 CANDIDATOS = [
     "MARCELA SABAT FERNANDEZ",
@@ -11,7 +10,7 @@ CANDIDATOS = [
     "NATALIA CASTILLO MUÑOZ",
     "GONZALO WINTER ETCHEBERRY",
     "MAYA FERNANDEZ ALLENDE"
-    ]
+]
 
 header = [
     "Region",
@@ -30,26 +29,28 @@ header = [
     "Pacto",
     "Partido",
     "Candidato",
-    "Votos TER"   
+    "Votos TER"
 ]
 
-header_clean =[
-    "Region", #0
-    "Distrito",#3
-    "Comuna",#4
-    "Local"#6
-    "Nro. Mesa",#7
-    "Tipo Mesa",#8
-    "Electores",#10
-    "Nro. En Voto",#11
-    "Candidato",#15
-    "Votos TER"#16
+header_clean = [
+    "Region",  # 0
+    "Distrito",  # 3
+    "Comuna",  # 4
+    "Local"  # 6
+    "Nro. Mesa",  # 7
+    "Tipo Mesa",  # 8
+    "Electores",  # 10
+    "Nro. En Voto",  # 11
+    "Candidato",  # 15
+    "Votos TER"  # 16
 ]
 
 root = os.path.abspath("../")
-print("ROOT: ",root)
+print("ROOT: ", root)
 
-csv_reader = csv.reader(open( root + "/Big-Sister/databases/IN/servel/mesa_diputados.csv"), delimiter = ';')
+csv_reader = csv.reader(
+    open(root + "/Big-Sister/databases/IN/servel/mesa_diputados.csv"), delimiter=';')
+
 
 def formatear():
     with open(root + "/Big-Sister/databases/OUT/servel/clean_mesa_diputados.csv", 'w', newline='') as outcsv:
@@ -59,17 +60,9 @@ def formatear():
         for row in csv_reader:
             for item in row:
                 if item in CANDIDATOS:
-                    row_clean = [row[0], row[3], row[4], row[6], row[7], row[8], row[9], row[10], row[11], row[15], row[16]]
+                    row_clean = [row[0], row[3], row[4], row[6], row[7],
+                                 row[8], row[9], row[10], row[11], row[15], row[16]]
                     writer.writerow(row_clean)
 
+
 formatear()
-
-
-
-
-
-
-
-
-
-
