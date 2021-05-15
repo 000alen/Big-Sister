@@ -49,10 +49,10 @@ header_clean =[
 root = os.path.abspath("../")
 print("ROOT: ",root)
 
-csv_reader = csv.reader(open( root + "/Big-Sister/databases/IN/servel/resultados_mesa_diputados.csv"), delimiter = ';')
+csv_reader = csv.reader(open( root + "/Big-Sister/databases/IN/servel/mesa_diputados.csv"), delimiter = ';')
 
 def formatear():
-    with open(root + "/Big-Sister/databases/OUT/servel/elecciones_diputados.csv", 'w', newline='') as outcsv:
+    with open(root + "/Big-Sister/databases/OUT/servel/clean_mesa_diputados.csv", 'w', newline='') as outcsv:
         writer = csv.writer(outcsv)
         writer.writerow(header_clean)
 

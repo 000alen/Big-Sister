@@ -10,17 +10,10 @@ COMUNAS = [
     "SANTIAGO"
 ]
 
-archivo = os.path.realpath("../../databases")
+root = os.path.abspath("../")
 
-csv_reader = csv.reader(open(archivo + "/OUT/servel/elecciones_diputados.csv"))
+# "/Big-Sister/databases/OUT/servel/resultados_historicos_diputados.csv"
 
-def formatear():
-    with open(archivo + "/OUT/resultados_historicos_diputados.csv", 'w', newline='') as outcsv:
-        writer = csv.writer(outcsv)
+db_historico = open(root + "/Big-Sister/databases/OUT/servel/clean_diputados_historico.csv", "w")
 
-        for row in csv_reader:
-            for item in row:
-                if item in COMUNAS:
-                    writer.writerow(row)
-
-formatear()
+db_historico.close()
