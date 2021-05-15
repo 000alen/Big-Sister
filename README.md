@@ -1,6 +1,10 @@
 # Big-Sister
 Proyecto de análisis estadístico de las elecciones chilenas
 
+<p align="center">
+    <img width="1000" src="https://github.com/000alen/Big-Sister/blob/main/assets/banner.png" alt="CoronaApp banner">
+</p>
+
 ## Configuración y preparación
 Para desarrollar, se deben descargar las siguientes bases de datos en `databases/IN/`:
 - [raw_padron_rm/](https://drive.google.com/drive/folders/1Xm0ZDjFSqIOI98CFnCOqA5fOttcvZqf0?usp=sharing)
