@@ -1,7 +1,7 @@
 import csv
 import os
 
-COMUNAS = [
+comunas = [
     "ÑUÑOA",
     "MACUL",
     "LA GRANJA",
@@ -10,7 +10,7 @@ COMUNAS = [
     "SANTIAGO"
 ]
 
-HEDEARS = [
+header = [
     "Sexo",
     "Región",
     "Comuna",
@@ -38,11 +38,11 @@ db_etareo = csv.writer(open(root + "/Big-Sister/databases/OUT/servel/clean_etare
 
 def limpiar_historico():
     etareo = csv.reader(open(root + "/Big-Sister/databases/IN/servel/etareo_comunas.csv", "r"), delimiter = ';')
-    db_etareo.writerow(HEDEARS)
+    db_etareo.writerow(header)
 
     for row in etareo:
         for item in row:
-            if item in COMUNAS:
+            if item in comunas:
                 db_etareo.writerow(row)
 
 limpiar_historico()
