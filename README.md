@@ -1,5 +1,5 @@
 <p align="center">
-    <img width="1000" src="https://github.com/000alen/Big-Sister/blob/main/assets/banner.png" alt="CoronaApp banner">
+    <img width="1000" src="https://github.com/000alen/Big-Sister/blob/main/assets/banner.png" alt="Big-Sister banner">
 </p>
 
 Proyecto de análisis estadístico de las elecciones chilenas
