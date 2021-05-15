@@ -9,8 +9,8 @@ from pathlib import Path
 
 print("Generando DCM")
 
-root = Path("../../databases/IN/raw_padron_rm/")
-out = Path("../../databases/OUT/DCM/")
+root = Path("../databases/IN/raw_padron_rm/")
+out = Path("../databases/OUT/DCM/")
 
 print(f"root: {root}")
 print(f"out: {out}")

@@ -8,8 +8,8 @@ from pathlib import Path
 
 print("Generando RM_diputados")
 
-root = Path("../../databases/IN/raw_resultados_rm/")
-out = Path("../../databases/OUT/RM_diputados/")
+root = Path("../databases/IN/raw_resultados_rm/")
+out = Path("../databases/OUT/RM_diputados/")
 
 print(f"root: {root}")
 print(f"out: {out}")
