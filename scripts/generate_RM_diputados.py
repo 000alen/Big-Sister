@@ -1,19 +1,29 @@
+"""
+Genera la base de datos RM_diputados
+    Contiene datos sobre los lugares de votación y sus resultados en las elecciones de diputados de la Region Metropolitana.
+"""
+
 from csv import reader, writer
 from pathlib import Path
 
-root = Path("../../databases/IN/servel/")
-out = Path("../../databases/OUT/servel/")
+print("Generando RM_diputados")
 
-candidatos = [
-    "MARCELA SABAT FERNANDEZ",
-    "GIORGIO JACKSON DRAGO",
-    "SEBASTIAN TORREALBA ALVARADO",
-    "JORGE ALESSAMDRI VERGARA",
-    "LUCIANO CRUZ-COKE CARVALLO",
-    "NATALIA CASTILLO MUÑOZ",
-    "GONZALO WINTER ETCHEBERRY",
-    "MAYA FERNANDEZ ALLENDE"
-]
+root = Path("../../databases/IN/raw_resultados_rm/")
+out = Path("../../databases/OUT/RM_diputados/")
+
+print(f"root: {root}")
+print(f"out: {out}")
+
+# candidatos = [
+#     "MARCELA SABAT FERNANDEZ",
+#     "GIORGIO JACKSON DRAGO",
+#     "SEBASTIAN TORREALBA ALVARADO",
+#     "JORGE ALESSAMDRI VERGARA",
+#     "LUCIANO CRUZ-COKE CARVALLO",
+#     "NATALIA CASTILLO MUÑOZ",
+#     "GONZALO WINTER ETCHEBERRY",
+#     "MAYA FERNANDEZ ALLENDE"
+# ]
 
 header = [
     "Region",
@@ -36,7 +46,7 @@ header = [
 ]
 
 tables = {
-    "clean_mesa_diputados": [
+    "RM_diputados": [
         "Distrito",
         "Comuna",
         "Local",
@@ -48,9 +58,11 @@ tables = {
     ]
 }
 
-mesa_diputados = reader(open(root / "mesa_diputados.csv"))
+mesa_diputados = reader(open(root / "Resultados_Mesa_DIPUTADOS_Tricel.csv"))
 
 for table_name, table_header in tables.items():
+    print(f"Tabla actual: {table_name}")
+
     table = writer(open(out / (table_name + ".csv"), "w", newline=""))
     # table.writerow(table_header)
 

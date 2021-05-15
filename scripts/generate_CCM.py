@@ -1,3 +1,5 @@
+raise NotImplementedError
+
 from geopy.geocoders import Nominatim
 from csv import reader, writer
 from pathlib import Path
