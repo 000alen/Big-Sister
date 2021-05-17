@@ -30,6 +30,7 @@ header = [
     "80- +",
     "TOTAL"
 ]
+
 root = os.path.abspath("../")
 
 # "/Big-Sister/databases/OUT/servel/resultados_historicos_diputados.csv"
