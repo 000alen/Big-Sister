@@ -68,11 +68,14 @@ def rango():
         for row in clean_read:
             if row[0] != "Región": 
                 if int(row[11]) / int(row[6]) >= PROBABILIDAD:
-                    #print(row)
+                    p = int(row[11]) / int(row[6])
+                    new_row = row.append(p)
                     writer.writerow(row)
 
 rango()
 
+#Pliss no refactorizar :)
+#Lo tengo q hacer yo jsjsj
 def formatear():
     with open(root + "/Big-Sister/databases/OUT/servel/clean_mesa_diputados.csv", 'w', newline='') as outcsv:
         writer = csv.writer(outcsv)
