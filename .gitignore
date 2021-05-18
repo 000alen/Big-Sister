@@ -142,6 +142,7 @@ databases/IN/servel/etareo_comunas.csv
 databases/IN/servel/mesa_diputados.csv
 databases/OUT/servel/clean_etareo_comunas.csv
 databases/OUT/servel/clean_mesa_diputados.csv
+databases/OUT/servel/clean_probabilidad_mesas.csv
 
 
 
