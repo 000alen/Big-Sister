@@ -21,6 +21,7 @@ Para ejecutar `BigSister` se debe ejecutar el siguiente comando `python -m BigSi
     * /OUT
         * clean_etareo_comunas.csv
         * clean_mesa_diputados.csv
+        * clean_probabilidad_mesas.csv
 
 
 ## Autores
