@@ -7,6 +7,8 @@ import csv
 import os
 from operator import itemgetter
 
+PROBABILIDAD = 0.16
+
 CANDIDATOS = [
     "MARCELA SABAT FERNANDEZ",
     "GIORGIO JACKSON DRAGO",
@@ -56,18 +58,33 @@ header_clean =[
 root = os.path.abspath("../")
 print("ROOT: ",root)
 
-csv_reader = csv.reader(open( root + "/Big-Sister/databases/IN/servel/mesa_diputados.csv"), delimiter = ';')
+mesa_read = csv.reader(open( root + "/Big-Sister/databases/IN/servel/mesa_diputados.csv"), delimiter = ';')
+clean_read = csv.reader(open( root + "/Big-Sister/databases/OUT/servel/clean_mesa_diputados.csv"))
+
+def rango():
+    with open(root + "/Big-Sister/databases/OUT/servel/clean_probabilidad_mesas.csv", 'w', newline='') as clean_proba:
+        writer = csv.writer(clean_proba)
+        writer.writerow(header_clean)
+        for row in clean_read:
+            if row[0] != "Región": 
+                if int(row[11]) / int(row[6]) >= PROBABILIDAD:
+                    #print(row)
+                    writer.writerow(row)
+
+rango()
 
 def formatear():
     with open(root + "/Big-Sister/databases/OUT/servel/clean_mesa_diputados.csv", 'w', newline='') as outcsv:
         writer = csv.writer(outcsv)
-        writer.writerow(header_clean)
+        writer.writerow(mesa_read)
 
-        for row in csv_reader:
+        for row in mesa_read:
             for item in row:
                 if item in CANDIDATOS:
                     #if int(row[16])/int(row[10]) >= 0.3:
                     row_clean = [row[0], row[3], row[4], row[6], row[7], row[9], row[10], row[11], row[12], row[14], row[15], row[16]]
                     writer.writerow(row_clean)
+    rango()
 
-formatear()
+#formatear()
+
